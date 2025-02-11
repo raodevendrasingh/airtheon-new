@@ -42,7 +42,7 @@
 				"noDelete": "error"
 			},
 			"style": {
-				"noNonNullAssertion": "error",
+				"noNonNullAssertion": "off",
 				"useShorthandArrayType": "error"
 			},
 			"complexity": {

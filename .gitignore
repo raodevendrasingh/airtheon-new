@@ -9,3 +9,7 @@
 # Cloudflare
 .mf
 .wrangler
+
+# Env
+.env
+.env.local

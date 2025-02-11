@@ -6,3 +6,8 @@ assets = { directory = "./build/client/" }
 
 [observability.logs]
 enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "saas-data-store"
+database_id = "5aeb8148-32bc-44ee-9e21-a849756467a7"
