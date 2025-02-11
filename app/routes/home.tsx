@@ -7,11 +7,7 @@ export function meta({}: Route.MetaArgs) {
 	];
 }
 
-export function loader({ context }: Route.LoaderArgs) {
-	return { message: context.cloudflare.env.VALUE_FROM_CLOUDFLARE };
-}
-
-export default function Home({ loaderData }: Route.ComponentProps) {
+export default function Home() {
 	return (
 		<div className="flex flex-col items-center justify-center h-screen">
 			<div className="flex items-center justify-center gap-2">
