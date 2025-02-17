@@ -2,6 +2,7 @@ import { Link, useLoaderData, useNavigate } from "react-router";
 import { authClient } from "@/utils/auth-client";
 import type { Route } from "./+types/home";
 import { auth } from "@/utils/auth";
+import { Button } from "@/components/ui/button";
 
 export function meta({}: Route.MetaArgs) {
 	return [{ title: "Profile" }];
@@ -29,20 +30,24 @@ export default function Profile() {
 			<div>
 				<span>
 					{session ? (
-						<>
-							Signed in as:
-							<br />
-							{session.user.name} ({session.user.email})
-							<br />
-							<button onClick={handleSignOut} className="border bg-red-400">
+						<div className="flex flex-col gap-3">
+							<span>Signed in as:</span>
+							<span>
+								{session.user.name} ({session.user.email})
+							</span>
+							<Button
+								onClick={handleSignOut}
+								variant="destructive"
+								className="w-fit"
+							>
 								Sign out
-							</button>
-						</>
+							</Button>
+						</div>
 					) : (
 						<div className="flex flex-col gap-3">
 							<span>Not signed in</span>
 							<Link to="/sign-in">
-								<button className="border bg-red-500 px-1 rounded-lg">Sign In</button>
+								<Button className="w-fit">Sign In</Button>
 							</Link>
 						</div>
 					)}
