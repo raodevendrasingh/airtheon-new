@@ -2,8 +2,11 @@ import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
 	return [
-		{ title: "React Router App" },
-		{ name: "description", content: "React Router x Cloudflare SAAS Kit!" },
+		{ title: "Home" },
+		{
+			name: "Public Template",
+			content: "React Router x Cloudflare SAAS Kit!",
+		},
 	];
 }
 
