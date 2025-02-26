@@ -35,11 +35,7 @@ export default function Profile() {
 							<span>
 								{session.user.name} ({session.user.email})
 							</span>
-							<Button
-								onClick={handleSignOut}
-								variant="destructive"
-								className="w-fit"
-							>
+							<Button onClick={handleSignOut} variant="destructive" className="w-fit">
 								Sign out
 							</Button>
 						</div>

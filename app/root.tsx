@@ -6,7 +6,8 @@ import {
 	ScrollRestoration,
 	isRouteErrorResponse,
 } from "react-router";
-
+import { ThemeProvider } from "./providers/theme-provider";
+import { createThemeScript } from "./lib/theme-script";
 import type { Route } from "./+types/root";
 import "./app.css";
 
@@ -24,6 +25,8 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+	const themeScript = createThemeScript("app-theme", "dark");
+
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head>
@@ -33,9 +36,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<Links />
 			</head>
 			<body>
-				{children}
-				<ScrollRestoration />
-				<Scripts />
+				<ThemeProvider defaultTheme="dark" storageKey="app-theme">
+					{children}
+					<ScrollRestoration />
+					<Scripts />
+					<script suppressHydrationWarning>{themeScript}</script>
+				</ThemeProvider>
 			</body>
 		</html>
 	);

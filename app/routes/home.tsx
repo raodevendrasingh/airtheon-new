@@ -1,3 +1,4 @@
+import { ThemeToggle } from "@/components/theme-toggle";
 import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
@@ -21,6 +22,7 @@ export default function Home() {
 			<div>
 				<span className="text-base">SAAS Starter Kit</span>
 			</div>
+			<ThemeToggle />
 		</div>
 	);
 }
