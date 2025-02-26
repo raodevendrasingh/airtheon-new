@@ -1,28 +1,14 @@
-import { ThemeToggle } from "@/components/theme-toggle";
 import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
-	return [
-		{ title: "Home" },
-		{
-			name: "Public Template",
-			content: "React Router x Cloudflare SAAS Kit!",
-		},
-	];
+	return [{ title: "Airtheon" }];
 }
 
 export default function Home() {
 	return (
-		<div className="flex flex-col items-center justify-center h-screen">
-			<div className="flex items-center justify-center gap-2">
-				<h1 className="text-red-500 text-2xl font-semibold">React Router</h1>
-				<span>x</span>
-				<h1 className="text-orange-500 text-2xl font-semibold">Cloudflare</h1>
-			</div>
-			<div>
-				<span className="text-base">SAAS Starter Kit</span>
-			</div>
-			<ThemeToggle />
+		<div className="flex flex-col items-center justify-center h-screen gap-5">
+			<h1 className="text-primary text-6xl font-bold">Airtheon</h1>
+			<span className="text-3xl font-semibold text-muted-foreground">Copilot for your brain.</span>
 		</div>
 	);
 }
