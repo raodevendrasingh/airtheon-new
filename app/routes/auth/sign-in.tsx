@@ -4,8 +4,11 @@ import { auth } from "@/utils/auth";
 
 export function meta({}: Route.MetaArgs) {
 	return [
-		{ title: "Sign In" },
-		{ name: "Sign In", content: "Sign in to React Router Cloudflare app!" },
+		{ title: "Sign In | Airtheon" },
+		{
+			name: "description",
+			content: "Copilot For Your Brain. Sign in to access your account.",
+		},
 	];
 }
 

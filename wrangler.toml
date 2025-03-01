@@ -11,6 +11,7 @@ enabled = true
 binding = "DB"
 database_name = "airbase"
 database_id = "8a28a618-9a3f-49e3-879d-540d0eaabf1e"
+migrations_dir = "./drizzle"
 
 [[r2_buckets]]
 bucket_name = "airstore"
